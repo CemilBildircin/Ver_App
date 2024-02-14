@@ -3,9 +3,8 @@ package Vercel_App.ProjectBase.step_definitions;
 import Vercel_App.ProjectBase.pages.VercelBasePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
-public class AutoComplete extends VercelBasePage {
+public class AutoComplete_SDEF extends VercelBasePage {
     private String selectedCountry;
 
     @When("the user clicks on the {string} button")

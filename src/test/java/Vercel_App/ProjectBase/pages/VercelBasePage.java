@@ -52,7 +52,7 @@ public class VercelBasePage {
     private WebElement challengingDom;
 
 
-    @FindBy(linkText = "Checkboxes")
+    @FindBy(xpath = "//a[@href='checkboxes.html' and contains(.,'Checkboxes')]")
     private WebElement checkBoxes;
 
 
@@ -173,6 +173,47 @@ public class VercelBasePage {
 
     @FindBy (xpath = "//div/p[@id='result' and contains(.,'You selected:')]")
     private WebElement selectedCountryMessage;
+
+    @FindBy (xpath = "//div[@id='content' and contains(.,'Checkboxes')]")
+    private WebElement checkboxHeader;
+
+    public WebElement getCheckboxHeader() {
+        return checkboxHeader;
+    }
+
+    @FindBy(xpath = "//input[@name='checkbox1'] ")
+    private WebElement checkboxOne;
+
+    @FindBy(xpath = "//input[@name='checkbox2'] ")
+    private WebElement checkboxTwo;
+
+    @FindBy (xpath = "//div[@id='column-a']")
+    private WebElement dragAndDropElementOne;
+    @FindBy (xpath = "//div[@id='column-b']")
+    private WebElement dragAndDropElementTwo;
+
+    @FindBy (xpath = "//div[@id='column-a']/header")
+    private WebElement dragAndDropVerification;
+
+    public WebElement getDragAndDropVerification() {
+        return dragAndDropVerification;
+    }
+
+    public WebElement getDragAndDropElementOne() {
+        return dragAndDropElementOne;
+    }
+
+    public WebElement getDragAndDropElementTwo() {
+        return dragAndDropElementTwo;
+    }
+
+    public WebElement getCheckboxOne() {
+        return checkboxOne;
+    }
+
+    public WebElement getCheckboxTwo() {
+        return checkboxTwo;
+    }
 
     public WebElement getSelectedCountryMessage() {
         return selectedCountryMessage;
