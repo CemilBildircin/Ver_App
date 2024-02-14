@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:13" },
         features = "src/test/resources/features/",
         glue = "Vercel_App/ProjectBase/step_definitions",
-        dryRun = true,
-        tags = "@autocomplete",
+        dryRun = false,
+        tags = "@autoComplete",
         monochrome = true,
         publish = false // online report in cucumber web.
 
