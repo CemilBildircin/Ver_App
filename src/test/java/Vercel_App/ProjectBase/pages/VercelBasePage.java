@@ -195,6 +195,97 @@ public class VercelBasePage {
     @FindBy (xpath = "//div[@id='column-a']/header")
     private WebElement dragAndDropVerification;
 
+    @FindBy (xpath = "//div[@id='content']/p/following-sibling::h3")
+    private WebElement dropdownPageValidation;
+
+    @FindBy (xpath = "//div[@id='content']/p/following-sibling::h6")
+    private WebElement simpleDropdownValidation;
+
+    @FindBy (xpath = "//select[@id='dropdown']")
+    private WebElement selectDropdown;
+
+    @FindBy (xpath = "//select[@id='year']")
+    private WebElement selectYearDropdown;
+
+    @FindBy (xpath = "//select[@id='month']")
+    private WebElement selectMonthDropdown;
+
+    @FindBy (xpath = "//select[@id='day']")
+    private WebElement selectDayDropdown;
+
+    @FindBy (xpath = "//div[@id='content']/select[4]/following-sibling::h6")
+    private WebElement stateSelectionValidation;
+
+    @FindBy (xpath = "//select[@id='state']")
+    private WebElement selectState;
+
+    @FindBy (xpath = "//select[@id='state']/following-sibling::h6")
+    private WebElement languageSelectionValidation;
+
+    @FindBy (xpath = "//select[@name='Languages']")
+    private  WebElement selectLanguage;
+
+    @FindBy (xpath = "//select[@name='Languages']/following-sibling::h6")
+    private WebElement selectWebsiteValidation;
+
+    @FindBy (xpath = "//a[@class='btn btn-secondary dropdown-toggle']")
+    private  WebElement selectWebPage;
+
+    @FindBy (xpath = "//div[@class='dropdown-menu']/a")
+    private WebElement webpageList;
+
+    public WebElement getWebpageList() {
+        return webpageList;
+    }
+
+    public WebElement getSelectWebsiteValidation() {
+        return selectWebsiteValidation;
+    }
+
+    public WebElement getSelectWebPage() {
+        return selectWebPage;
+    }
+
+    public WebElement getSelectLanguage() {
+        return selectLanguage;
+    }
+
+    public WebElement getLanguageSelectionValidation() {
+        return languageSelectionValidation;
+    }
+
+    public WebElement getSelectState() {
+        return selectState;
+    }
+
+    public WebElement getStateSelectionValidation() {
+        return stateSelectionValidation;
+    }
+
+    public WebElement getSelectMonthDropdown() {
+        return selectMonthDropdown;
+    }
+
+    public WebElement getSelectDayDropdown() {
+        return selectDayDropdown;
+    }
+
+    public WebElement getSelectYearDropdown() {
+        return selectYearDropdown;
+    }
+
+    public WebElement getSelectDropdown() {
+        return selectDropdown;
+    }
+
+    public WebElement getSimpleDropdownValidation() {
+        return simpleDropdownValidation;
+    }
+
+    public WebElement getDropdownPageValidation() {
+        return dropdownPageValidation;
+    }
+
     public WebElement getDragAndDropVerification() {
         return dragAndDropVerification;
     }
