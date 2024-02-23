@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = "Vercel_App/ProjectBase/step_definitions",
         dryRun = false,
-        tags = "@dropdown",
+        tags = "@smoke",
         monochrome = true,
         publish = false // online report in cucumber web.
 
