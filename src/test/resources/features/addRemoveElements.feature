@@ -1,6 +1,6 @@
 Feature: Checking the functionality of Add/Remove buttons
 
-  @AddRemove @smoke @ui
+  @smoke @AddRemove @ui
   Scenario: User tests the Add/Remove functionality from the landing page
     Given the user is on the landing page of the Vercel app
     When the user navigates to the Add-Remove page

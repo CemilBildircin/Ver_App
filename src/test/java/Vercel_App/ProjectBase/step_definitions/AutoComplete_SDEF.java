@@ -28,7 +28,7 @@ public class AutoComplete_SDEF extends VercelBasePage {
 
     @Then("the user should see the selected country name")
     public void the_user_should_see_the_selected_country_name() {
-        selectedCountryValidation("Gabon");
+        selectedCountryValidation("Gambia");
 
     }
 

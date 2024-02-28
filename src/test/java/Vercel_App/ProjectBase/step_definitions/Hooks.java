@@ -17,9 +17,8 @@ public class Hooks {
     public void setUp(Scenario scenario) {
         Driver.getDriver();
         BrowserUtils.myScenario = scenario;
-        System.out.println("Let see this message");
 
-        //LOG.info("..........START AUTOMATION.........");
+        LOG.info("..........START AUTOMATION.........");
 
     }
 
@@ -30,9 +29,8 @@ public class Hooks {
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
-        System.out.println("Let see this message");
         Driver.closeDriver();
-        //LOG.info("..........END AUTOMATION.........");
+        LOG.info("..........END AUTOMATION.........");
     }
 
     // @AfterStep

@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,7 +26,7 @@ public class AB_SDef {
     @Given("user should be able to see menu items and validate them")
     public void user_should_be_able_to_see_menu_items_and_validate_them() {
         List<WebElement> menuItems = Driver.getDriver().findElements(By.xpath("//li[@class='list-group-item']"));
-       // List<String> actualMenuItems = menuItems.stream().map(WebElement::getText).toList();
+        List<String> actualMenuItems = menuItems.stream().map(WebElement::getText).collect(Collectors.toList());
         List<String> expectedMenuItems = Arrays.asList(
                 "A/B Testing", "Add/Remove Elements", "Autocomplete", "Basic Auth (user and pass: admin)", "Broken Images",
                 "Challenging DOM", "Checkboxes", "Context Menu", "Disappearing Elements", "Drag and Drop", "Drag and Drop Circles",
@@ -37,7 +38,7 @@ public class AB_SDef {
                 "Secure File Download", "Shifting Content", "Sign Up For Mailing List", "Slow Resources", "Sortable Data Tables",
                 "Status Codes", "Typos", "WYSIWYG Editor", "Web Tables"
         );
-       // assertEquals("Test Failed....",expectedMenuItems,actualMenuItems);
+       assertEquals("Test Failed....",expectedMenuItems,actualMenuItems);
 
     }
 

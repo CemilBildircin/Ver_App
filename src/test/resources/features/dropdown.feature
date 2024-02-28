@@ -1,6 +1,6 @@
 Feature: User checks and verifies the dropdown page features
 
-  @dropdown
+  @smoke @dropdown @ui
   Scenario: User checks all the dropdown menus
     Given the user navigates "dropdown" page of the Vercel app
     Then user should be able to validate the page items

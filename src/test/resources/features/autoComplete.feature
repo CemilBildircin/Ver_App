@@ -1,6 +1,6 @@
 Feature: Checking the functionality of Autocomplete page
 
-  @autoComplete
+  @smoke @autoComplete @ui
   Scenario: User tests the autocomplete function
     Given the user is on the landing page of the Vercel app
     When the user clicks on the "autocomplete" button

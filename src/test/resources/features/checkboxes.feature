@@ -1,6 +1,6 @@
 Feature: Checking the checkboxes and try multiple options
 
-  @checkbox
+  @smoke @checkbox @ui
   Scenario: User test multiple different option on checkboxes
     Given the user is on the checkboxes page
     Then user verify the checkboxes are visible

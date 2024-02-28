@@ -1,6 +1,6 @@
 Feature: Checking the AB button functionality
 
-  @ABButton @smoke @ui
+  @smoke @ABButton @ui
   Scenario: User navigates to the AB testing page from the landing page of the Vercel App
     Given the user is on the landing page of the Vercel app
     And user should be able to see menu items and validate them
