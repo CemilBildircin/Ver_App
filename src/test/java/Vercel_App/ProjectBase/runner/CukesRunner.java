@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/html-reports/cucumber-reports.html",
-                "json:target/json-reports/json-report.json",
-                "rerun:target/rerun.txt", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:13"},
+        plugin = {"json:target/cucumber.json", //"html:target/cucumber/report.html",
+                "junit:target/junit/junit-report.xml",
+                "rerun:target/rerun.txt"},
         features = "src/test/resources/features/",
         glue = "Vercel_App/ProjectBase/step_definitions",
         dryRun = false,
@@ -20,6 +20,6 @@ import org.junit.runner.RunWith;
 
 )
 public class CukesRunner {
-
+// mvn test -Dcucumber.filter.tags=@smoke
 }
 
