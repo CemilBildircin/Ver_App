@@ -13,23 +13,26 @@ public class Hooks {
 
     private static final Logger LOG = LogManager.getLogger();
 
-    @Before
+    @Before("@ui")
     public void setUp(Scenario scenario) {
         Driver.getDriver();
         BrowserUtils.myScenario = scenario;
-        LOG.info("..........START AUTOMATION.........");
+        System.out.println("Let see this message");
+
+        //LOG.info("..........START AUTOMATION.........");
 
     }
 
-    @After
+    @After("@ui")
     public void tearDown(Scenario scenario) {
         // only takes a screenshot when scenario is failed
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
+        System.out.println("Let see this message");
         Driver.closeDriver();
-        LOG.info("..........END AUTOMATION.........");
+        //LOG.info("..........END AUTOMATION.........");
     }
 
     // @AfterStep
